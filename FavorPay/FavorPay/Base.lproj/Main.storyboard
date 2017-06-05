@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="FavorPay" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IsC-Ee-O5K">
+                                <rect key="frame" x="50" y="617" width="275.5" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't Have an Accout?     " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2IG-Cn-I0H" customClass="FavorPayLabel" customModule="FavorPay" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="195.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMv-eC-G4I">
+                                        <rect key="frame" x="195.5" y="0.0" width="80" height="30"/>
+                                        <state key="normal" title="Get Started"/>
+                                        <connections>
+                                            <segue destination="4NJ-aG-qfR" kind="show" id="191-zd-DKG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="VIZ-8w-ajS" customClass="FavorPayTextField" customModule="FavorPay" customModuleProvider="target">
+                                <rect key="frame" x="94" y="152" width="187.5" height="30"/>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="StJ-P9-XJD" customClass="FavorPayTextField" customModule="FavorPay" customModuleProvider="target">
+                                <rect key="frame" x="94" y="190" width="187.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uB-23-htm" customClass="FavorPayButton" customModule="FavorPay" customModuleProvider="target">
+                                <rect key="frame" x="94" y="228" width="187.5" height="30"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <segue destination="xDF-fa-qT0" kind="show" id="uGi-hK-ppB"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FavorPay" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjW-os-O3C">
+                                <rect key="frame" x="139" y="114.5" width="97.5" height="30"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="24"/>
+                                <color key="textColor" red="0.98039215686274506" green="0.38039215686274508" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="VIZ-8w-ajS" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:2" id="0XV-K6-z08"/>
+                            <constraint firstItem="IsC-Ee-O5K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4K6-gv-awq"/>
+                            <constraint firstItem="5uB-23-htm" firstAttribute="top" secondItem="StJ-P9-XJD" secondAttribute="bottom" constant="8" symbolic="YES" id="7S4-1f-8sl"/>
+                            <constraint firstItem="VIZ-8w-ajS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="132" id="CfP-at-piH"/>
+                            <constraint firstItem="VIZ-8w-ajS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OmC-IC-Rap"/>
+                            <constraint firstItem="StJ-P9-XJD" firstAttribute="top" secondItem="VIZ-8w-ajS" secondAttribute="bottom" constant="8" symbolic="YES" id="RRN-be-YsG"/>
+                            <constraint firstItem="VIZ-8w-ajS" firstAttribute="top" secondItem="xjW-os-O3C" secondAttribute="bottom" constant="8" id="RbE-6H-WPR"/>
+                            <constraint firstItem="xjW-os-O3C" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rs5-Qa-LYO"/>
+                            <constraint firstItem="StJ-P9-XJD" firstAttribute="width" secondItem="VIZ-8w-ajS" secondAttribute="width" id="f6U-OI-fjC"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IsC-Ee-O5K" secondAttribute="bottom" constant="20" id="hQ9-Zg-gHD"/>
+                            <constraint firstItem="IsC-Ee-O5K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hiz-Ih-bmF"/>
+                            <constraint firstItem="StJ-P9-XJD" firstAttribute="width" secondItem="5uB-23-htm" secondAttribute="width" id="scM-kJ-naB"/>
+                            <constraint firstItem="StJ-P9-XJD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vGf-gh-ehZ"/>
+                            <constraint firstItem="5uB-23-htm" firstAttribute="top" secondItem="StJ-P9-XJD" secondAttribute="bottom" constant="8" id="wJ9-qL-Rah"/>
+                            <constraint firstItem="5uB-23-htm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="waE-Ms-CAh"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7Rg-m4-Jeh">
+            <objects>
+                <navigationController id="xDF-fa-qT0" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4N3-ET-V2G">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="NFg-Je-0px" kind="relationship" relationship="rootViewController" id="G9P-dt-khj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s2G-mT-hQP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1186" y="137"/>
+        </scene>
+        <!--FavorPay-->
+        <scene sceneID="2MG-Qj-SS0">
+            <objects>
+                <viewController id="NFg-Je-0px" customClass="FavorPayViewController" customModule="FavorPay" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aAp-mV-xge"/>
+                        <viewControllerLayoutGuide type="bottom" id="F1n-xI-lPK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="De9-l0-MFd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="f51-WN-DGH">
+                                <rect key="frame" x="24" y="72" width="327" height="167"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cdk-9F-jBt" customClass="FavorPayButton" customModule="FavorPay" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="159.5" height="167"/>
+                                        <state key="normal" title="Perform"/>
+                                        <connections>
+                                            <segue destination="FuZ-6X-s1h" kind="show" id="9Kx-B3-V1c"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NrL-di-nel" customClass="FavorPayButton" customModule="FavorPay" customModuleProvider="target">
+                                        <rect key="frame" x="167.5" y="0.0" width="159.5" height="167"/>
+                                        <state key="normal" title="Request"/>
+                                        <connections>
+                                            <segue destination="4uK-QT-qjw" kind="show" id="jYM-ut-f0C"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Cdk-9F-jBt" firstAttribute="leading" secondItem="f51-WN-DGH" secondAttribute="leading" id="8VT-b2-0Db"/>
+                                    <constraint firstAttribute="trailing" secondItem="NrL-di-nel" secondAttribute="trailing" id="L0T-XZ-6ey"/>
+                                    <constraint firstItem="Cdk-9F-jBt" firstAttribute="width" secondItem="NrL-di-nel" secondAttribute="width" id="YYa-Sr-WNr"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Od3-2M-gHe">
+                                <rect key="frame" x="24" y="247" width="327" height="166.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5tk-A8-NT2" customClass="FavorPayButton" customModule="FavorPay" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="159.5" height="166.5"/>
+                                        <state key="normal" title="Search"/>
+                                        <connections>
+                                            <segue destination="E3X-i3-WTj" kind="show" id="4WF-aa-nBz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ZQ-EV-3s9" customClass="FavorPayButton" customModule="FavorPay" customModuleProvider="target">
+                                        <rect key="frame" x="167.5" y="0.0" width="159.5" height="166.5"/>
+                                        <state key="normal" title="History"/>
+                                        <connections>
+                                            <segue destination="daB-3Y-TuD" kind="show" id="IVU-eZ-L7l"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="5tk-A8-NT2" firstAttribute="width" secondItem="5ZQ-EV-3s9" secondAttribute="width" id="EAJ-o3-Ljq"/>
+                                    <constraint firstAttribute="trailing" secondItem="5ZQ-EV-3s9" secondAttribute="trailing" id="LoN-DL-342"/>
+                                    <constraint firstItem="5tk-A8-NT2" firstAttribute="leading" secondItem="Od3-2M-gHe" secondAttribute="leading" id="UFd-Yw-6B9"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sI0-YA-WbU">
+                                <rect key="frame" x="24" y="421.5" width="327" height="167"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgL-oo-oIo" customClass="FavorPayButton" customModule="FavorPay" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="159.5" height="167"/>
+                                        <state key="normal" title="Badges"/>
+                                        <connections>
+                                            <segue destination="x9c-k5-1hc" kind="show" id="rdd-6Y-dM2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gx-pb-wdV" customClass="FavorPayButton" customModule="FavorPay" customModuleProvider="target">
+                                        <rect key="frame" x="167.5" y="0.0" width="159.5" height="167"/>
+                                        <state key="normal" title="Contact Us"/>
+                                        <connections>
+                                            <segue destination="5yZ-nq-uOV" kind="show" id="HfP-i6-BTa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="dgL-oo-oIo" firstAttribute="leading" secondItem="sI0-YA-WbU" secondAttribute="leading" id="2rP-Y2-zlL"/>
+                                    <constraint firstAttribute="trailing" secondItem="1gx-pb-wdV" secondAttribute="trailing" id="Fed-wI-au2"/>
+                                    <constraint firstItem="dgL-oo-oIo" firstAttribute="width" secondItem="1gx-pb-wdV" secondAttribute="width" id="boX-uf-dkN"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Od3-2M-gHe" firstAttribute="height" secondItem="De9-l0-MFd" secondAttribute="height" multiplier="1:4" id="AJY-Z4-mmN"/>
+                            <constraint firstItem="f51-WN-DGH" firstAttribute="height" secondItem="De9-l0-MFd" secondAttribute="height" multiplier="1:4" id="AlX-cg-BJw"/>
+                            <constraint firstItem="f51-WN-DGH" firstAttribute="top" secondItem="aAp-mV-xge" secondAttribute="bottom" constant="8" symbolic="YES" id="EJy-fB-XfF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="f51-WN-DGH" secondAttribute="trailing" constant="8" id="WxL-Ci-1Qs"/>
+                            <constraint firstItem="Od3-2M-gHe" firstAttribute="leading" secondItem="De9-l0-MFd" secondAttribute="leadingMargin" constant="8" id="dqM-La-kW8"/>
+                            <constraint firstItem="sI0-YA-WbU" firstAttribute="top" secondItem="Od3-2M-gHe" secondAttribute="bottom" constant="8" symbolic="YES" id="f61-zT-kEU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sI0-YA-WbU" secondAttribute="trailing" constant="8" id="h8N-8I-WhD"/>
+                            <constraint firstItem="f51-WN-DGH" firstAttribute="leading" secondItem="De9-l0-MFd" secondAttribute="leadingMargin" constant="8" id="i8R-np-aXH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Od3-2M-gHe" secondAttribute="trailing" constant="8" id="iUc-H5-EbY"/>
+                            <constraint firstItem="Od3-2M-gHe" firstAttribute="top" secondItem="f51-WN-DGH" secondAttribute="bottom" constant="8" symbolic="YES" id="tS8-XO-kQA"/>
+                            <constraint firstItem="sI0-YA-WbU" firstAttribute="height" secondItem="De9-l0-MFd" secondAttribute="height" multiplier="1:4" id="tfk-Yz-YGk"/>
+                            <constraint firstItem="sI0-YA-WbU" firstAttribute="leading" secondItem="De9-l0-MFd" secondAttribute="leadingMargin" constant="8" id="zgb-1Q-Uwb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="FavorPay" id="Pt1-cl-Bw2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e2L-UQ-LYW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2039" y="137"/>
+        </scene>
+        <!--Perform-->
+        <scene sceneID="7pw-xm-793">
+            <objects>
+                <viewController title="Perform" id="FuZ-6X-s1h" customClass="PerformViewController" customModule="FavorPay" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sdc-gp-uFe"/>
+                        <viewControllerLayoutGuide type="bottom" id="HDc-QD-sf8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fHw-7V-TDa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="cell" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t8N-i9-2yu">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="Pz6-BN-yue" style="IBUITableViewCellStyleDefault" id="gED-wK-Tc9">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gED-wK-Tc9" id="FaJ-F1-se9">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Pz6-BN-yue">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="FuZ-6X-s1h" id="J6a-AT-bk9"/>
+                                    <outlet property="delegate" destination="FuZ-6X-s1h" id="kS9-hO-erq"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="view" destination="t8N-i9-2yu" id="fdw-Ea-AYm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="heV-zi-X4V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2800.8000000000002" y="-433.13343328335833"/>
+        </scene>
+        <!--History-->
+        <scene sceneID="XDR-Sz-7Ny">
+            <objects>
+                <viewController title="History" id="daB-3Y-TuD" customClass="HistoryViewController" customModule="FavorPay" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NEb-h7-3BK"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bms-no-hwD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YFJ-V1-1hb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qnl-bD-Vi0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3561" y="440"/>
+        </scene>
+        <!--Contact Us-->
+        <scene sceneID="7St-vX-dRH">
+            <objects>
+                <viewController title="Contact Us" id="5yZ-nq-uOV" customClass="ContactUsViewController" customModule="FavorPay" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="k3g-uo-Sl1"/>
+                        <viewControllerLayoutGuide type="bottom" id="IeZ-ny-ivF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="coH-oe-9ZY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UQT-BJ-eff" customClass="FavorPayTextField" customModule="FavorPay" customModuleProvider="target">
+                                <rect key="frame" x="62.5" y="98" width="250" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Nd-zU-dti" customClass="FavorPayTextField" customModule="FavorPay" customModuleProvider="target">
+                                <rect key="frame" x="62.5" y="136" width="250" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zmx-kS-rKX" customClass="FavorPayButton" customModule="FavorPay" customModuleProvider="target">
+                                <rect key="frame" x="62.5" y="349" width="250" height="30"/>
+                                <state key="normal" title="Submit"/>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fhm-ux-lMl">
+                                <rect key="frame" x="62.5" y="174" width="250" height="167"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Zmx-kS-rKX" firstAttribute="width" secondItem="fhm-ux-lMl" secondAttribute="width" id="2V2-rS-956"/>
+                            <constraint firstItem="Zmx-kS-rKX" firstAttribute="top" secondItem="fhm-ux-lMl" secondAttribute="bottom" constant="8" symbolic="YES" id="3MT-Wq-ob7"/>
+                            <constraint firstItem="fhm-ux-lMl" firstAttribute="centerX" secondItem="coH-oe-9ZY" secondAttribute="centerX" id="5PV-ek-RIP"/>
+                            <constraint firstItem="fhm-ux-lMl" firstAttribute="height" secondItem="coH-oe-9ZY" secondAttribute="height" multiplier="1:4" id="Brt-E1-3pC"/>
+                            <constraint firstItem="4Nd-zU-dti" firstAttribute="width" secondItem="UQT-BJ-eff" secondAttribute="width" id="Hqe-gX-sK5"/>
+                            <constraint firstItem="fhm-ux-lMl" firstAttribute="width" secondItem="4Nd-zU-dti" secondAttribute="width" id="S5K-RA-jHR"/>
+                            <constraint firstItem="Zmx-kS-rKX" firstAttribute="centerX" secondItem="coH-oe-9ZY" secondAttribute="centerX" id="WLt-zO-lWw"/>
+                            <constraint firstItem="4Nd-zU-dti" firstAttribute="centerX" secondItem="coH-oe-9ZY" secondAttribute="centerX" id="Y4l-VG-pqB"/>
+                            <constraint firstItem="UQT-BJ-eff" firstAttribute="width" secondItem="coH-oe-9ZY" secondAttribute="width" multiplier="1:1.5" id="dxy-II-TdT"/>
+                            <constraint firstItem="fhm-ux-lMl" firstAttribute="top" secondItem="4Nd-zU-dti" secondAttribute="bottom" constant="8" symbolic="YES" id="ehC-ep-biQ"/>
+                            <constraint firstItem="UQT-BJ-eff" firstAttribute="centerX" secondItem="coH-oe-9ZY" secondAttribute="centerX" id="hHU-2M-Pjq"/>
+                            <constraint firstItem="UQT-BJ-eff" firstAttribute="top" secondItem="k3g-uo-Sl1" secondAttribute="bottom" constant="34" id="xCU-Ko-tax"/>
+                            <constraint firstItem="4Nd-zU-dti" firstAttribute="top" secondItem="UQT-BJ-eff" secondAttribute="bottom" constant="8" symbolic="YES" id="yRP-A8-yXC"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mzB-kw-bIX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4284" y="440"/>
+        </scene>
+        <!--Request-->
+        <scene sceneID="ufl-cV-hjQ">
+            <objects>
+                <viewController title="Request" id="4uK-QT-qjw" customClass="RequestViewController" customModule="FavorPay" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JoW-h5-Y9f"/>
+                        <viewControllerLayoutGuide type="bottom" id="SiP-vR-1Tt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Exk-vV-73I">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d4H-DH-PMy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2801" y="439"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="8MR-Bt-4Z5">
+            <objects>
+                <viewController title="Search" id="E3X-i3-WTj" customClass="SearchViewController" customModule="FavorPay" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7tB-3J-xEh"/>
+                        <viewControllerLayoutGuide type="bottom" id="hMM-43-Lb0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="71e-ZO-mMa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="Zj4-AB-e2D" id="caB-Vg-fVK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wzh-aa-dps" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="Zj4-AB-e2D">
+                    <connections>
+                        <outlet property="delegate" destination="E3X-i3-WTj" id="1x7-bK-R74"/>
+                        <outlet property="searchContentsController" destination="E3X-i3-WTj" id="3bQ-md-H0u"/>
+                        <outlet property="searchResultsDataSource" destination="E3X-i3-WTj" id="poq-Jn-okn"/>
+                        <outlet property="searchResultsDelegate" destination="E3X-i3-WTj" id="abr-qD-30D"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="3561" y="-433"/>
+        </scene>
+        <!--Badges-->
+        <scene sceneID="jcR-NF-5IW">
+            <objects>
+                <viewController title="Badges" id="x9c-k5-1hc" customClass="BadgesViewController" customModule="FavorPay" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rVb-VY-idB"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rvr-4H-dcJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LP0-0o-wEZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tva-LY-uMi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4284" y="-434"/>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="FN2-wg-F2Y">
+            <objects>
+                <viewController id="4NJ-aG-qfR" customClass="RegisterViewController" customModule="FavorPay" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vWS-dI-0Ot"/>
+                        <viewControllerLayoutGuide type="bottom" id="1ID-3c-KZ5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zC0-6U-gVI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MQw-oS-VKk" customClass="FavorPayTextField" customModule="FavorPay" customModuleProvider="target">
+                                <rect key="frame" x="94" y="228" width="187.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xyQ-uR-dR4" customClass="FavorPayTextField" customModule="FavorPay" customModuleProvider="target">
+                                <rect key="frame" x="94" y="190" width="187.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L8f-8h-OdU">
+                                <rect key="frame" x="94" y="266" width="187.5" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0Z-BZ-8Hz" customClass="FavorPayButton" customModule="FavorPay" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="93.5" height="30"/>
+                                        <state key="normal" title="Cancel"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="zXK-Yg-wO5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="emX-Fc-TdI" customClass="FavorPayButton" customModule="FavorPay" customModuleProvider="target">
+                                        <rect key="frame" x="93.5" y="0.0" width="94" height="30"/>
+                                        <state key="normal" title="Submit"/>
+                                        <connections>
+                                            <segue destination="xDF-fa-qT0" kind="show" id="WIQ-DZ-fhP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Z0Z-BZ-8Hz" firstAttribute="width" secondItem="emX-Fc-TdI" secondAttribute="width" id="3Fl-Vu-2BE"/>
+                                </constraints>
+                            </stackView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="omE-J8-6ev" customClass="FavorPayTextField" customModule="FavorPay" customModuleProvider="target">
+                                <rect key="frame" x="94" y="152" width="187.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FavorPay" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xdu-WR-7uv">
+                                <rect key="frame" x="139" y="114" width="97.5" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="24"/>
+                                <color key="textColor" red="0.98039215690000003" green="0.3803921569" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xyQ-uR-dR4" firstAttribute="top" secondItem="omE-J8-6ev" secondAttribute="bottom" constant="8" id="27a-sm-Jic"/>
+                            <constraint firstItem="omE-J8-6ev" firstAttribute="centerX" secondItem="zC0-6U-gVI" secondAttribute="centerX" id="8jx-ZQ-avf"/>
+                            <constraint firstItem="MQw-oS-VKk" firstAttribute="centerX" secondItem="zC0-6U-gVI" secondAttribute="centerX" id="9Uz-o3-wvc"/>
+                            <constraint firstItem="xyQ-uR-dR4" firstAttribute="centerX" secondItem="zC0-6U-gVI" secondAttribute="centerX" id="HJ8-hV-1P0"/>
+                            <constraint firstItem="omE-J8-6ev" firstAttribute="width" secondItem="zC0-6U-gVI" secondAttribute="width" multiplier="1:2" id="KKY-YP-Ukp"/>
+                            <constraint firstItem="L8f-8h-OdU" firstAttribute="width" secondItem="MQw-oS-VKk" secondAttribute="width" id="TKk-3Q-5Hh"/>
+                            <constraint firstItem="xyQ-uR-dR4" firstAttribute="width" secondItem="omE-J8-6ev" secondAttribute="width" id="ccC-aC-HaX"/>
+                            <constraint firstItem="MQw-oS-VKk" firstAttribute="width" secondItem="xyQ-uR-dR4" secondAttribute="width" id="cd9-Jc-bEW"/>
+                            <constraint firstItem="L8f-8h-OdU" firstAttribute="top" secondItem="MQw-oS-VKk" secondAttribute="bottom" constant="8" id="dCg-66-RVa"/>
+                            <constraint firstItem="omE-J8-6ev" firstAttribute="top" secondItem="vWS-dI-0Ot" secondAttribute="bottom" constant="132" id="fkW-Ei-mHS"/>
+                            <constraint firstItem="MQw-oS-VKk" firstAttribute="top" secondItem="xyQ-uR-dR4" secondAttribute="bottom" constant="8" id="ucq-qF-aZD"/>
+                            <constraint firstItem="L8f-8h-OdU" firstAttribute="centerX" secondItem="zC0-6U-gVI" secondAttribute="centerX" id="v2t-L7-fpt"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IUK-Uo-CiV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="916.1919040479761"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="WIQ-DZ-fhP"/>
+    </inferredMetricsTieBreakers>
+</document>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 let THEME_COLOR1 = UIColor(red:1.00, green:0.72, blue:0.22, alpha:1.0)
 let THEME_COLOR2 = UIColor(red:0.98, green:0.38, blue:0.13, alpha:1.0)
@@ -33,6 +34,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navAppearance.tintColor = THEME_COLOR2
         navAppearance.titleTextAttributes = [NSForegroundColorAttributeName : THEME_COLOR2]
         navAppearance.isTranslucent = false
+        
+        FirebaseApp.configure()
         
         return true
     }

@@ -1,9 +1,6 @@
 //
-//  LocationLookup.swift
-//  GeoCalculator
-//
-//  Created by Daniel Newell on 5/30/17.
-//  Copyright © 2017 Adam Luckenbaugh. All rights reserved.
+//  GoodDeed.swift
+//  FavorPayApp
 //
 
 import Foundation
@@ -13,12 +10,14 @@ struct GoodDeed {
     var id:String
     var title:String
     var location:String
-    var description:String
+    var desc:String
+    var points:Int
     
-    init(id:String, title:String, location:String, description:String) {
+    init(id:String, title:String, location:String, desc:String, points:Int) {
         self.id = id
         self.title = title
         self.location = location
-        self.description = description
+        self.desc = desc
+        self.points = points
     }
 }

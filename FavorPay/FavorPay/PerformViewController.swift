@@ -17,28 +17,26 @@ class PerformViewController: FavorPayViewController, UITableViewDelegate, UITabl
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        print("Row at \(indexPath.row)")
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = goodDeeds[indexPath.row].id
+        let cell = tableView.dequeueReusableCell(withIdentifier: "goodDeedCell", for: indexPath) as! FavorPayTableViewCell
+        
+        cell.title.text = self.goodDeeds[indexPath.row].title
+        cell.desc.text = self.goodDeeds[indexPath.row].desc
+        cell.points.text = String(self.goodDeeds[indexPath.row].points)
+        
         return cell
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        goodDeeds = self.getDefaultGoodDeeds()
-        
-    }
-    
-    func getDefaultGoodDeeds() -> [GoodDeed] {
-        var goodDeeds: [GoodDeed] = []
-        for i in 1...1000 {
-            let id = "Test\(i)"
-            goodDeeds.append(GoodDeed(id: id, title: "", location: "", description: ""))
+        //This is a mock of good deeds for testing
+        for i in 1...100 {
+            let points = Int(arc4random_uniform(100) + 1)
+            goodDeeds.append(GoodDeed(id: "\(i)", title: "Text\(i)", location: "", desc: "This is my \(i) Description", points: points))
         }
-        return goodDeeds
     }
 }

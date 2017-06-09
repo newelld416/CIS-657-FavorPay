@@ -1,0 +1,72 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "23B4D05DE6B21B6CDFC838F6DC75FCBD62DC3843",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "2C7C02D4C342C30815707B2852FA0B493D194307" : 9223372036854775807,
+    "4BD58CB243ED0DD2DCE0FC03B96D3ED89E4E2167" : 9223372036854775807,
+    "FE2A85B7961E9102F40F764205292148A2B29F64" : 9223372036854775807,
+    "EB1914D6D35835CB0913E4B50F3CEF5FD484833E" : 9223372036854775807,
+    "6DF1E6E6E1B9BBA798142105FBE925BD13E70176" : 9223372036854775807,
+    "AA4E36C0318693D3325060335162D9B5ED098F82" : 9223372036854775807,
+    "58CDCFE7B1B62A31193D3DCF25CECBBFE59F1BE9" : 9223372036854775807,
+    "23B4D05DE6B21B6CDFC838F6DC75FCBD62DC3843" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "B6CF7CC8-9D41-4829-9521-CF502E8BD7FB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "2C7C02D4C342C30815707B2852FA0B493D194307" : "..\/geo-app",
+    "4BD58CB243ED0DD2DCE0FC03B96D3ED89E4E2167" : "..\/geo-app-android",
+    "FE2A85B7961E9102F40F764205292148A2B29F64" : "..\/bootcamp-git",
+    "EB1914D6D35835CB0913E4B50F3CEF5FD484833E" : "..\/DecimalMinusTextField",
+    "6DF1E6E6E1B9BBA798142105FBE925BD13E70176" : "..\/GeoCalc-iOS",
+    "AA4E36C0318693D3325060335162D9B5ED098F82" : "..\/geocalculator",
+    "58CDCFE7B1B62A31193D3DCF25CECBBFE59F1BE9" : "..\/mobile-app-dev-book",
+    "23B4D05DE6B21B6CDFC838F6DC75FCBD62DC3843" : "CIS-657-FavorPay\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "FavorPay",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "FavorPay\/FavorPay.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/newelld416\/CIS-657-FavorPay.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "23B4D05DE6B21B6CDFC838F6DC75FCBD62DC3843"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/newelld416\/geo-app.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2C7C02D4C342C30815707B2852FA0B493D194307"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/newelld416\/geo-app-android.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4BD58CB243ED0DD2DCE0FC03B96D3ED89E4E2167"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/gvsucis\/mobile-app-dev-book.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "58CDCFE7B1B62A31193D3DCF25CECBBFE59F1BE9"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/SahanaGunaseker\/GeoCalc-iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6DF1E6E6E1B9BBA798142105FBE925BD13E70176"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/adamluckenbaugh\/geocalculator.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AA4E36C0318693D3325060335162D9B5ED098F82"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/jengelsma\/DecimalMinusTextField.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "EB1914D6D35835CB0913E4B50F3CEF5FD484833E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/newelld416\/bootcamp-git.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FE2A85B7961E9102F40F764205292148A2B29F64"
+    }
+  ]
+}

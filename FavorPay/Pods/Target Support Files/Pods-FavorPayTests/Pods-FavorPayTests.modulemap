@@ -1,0 +1,6 @@
+framework module Pods_FavorPayTests {
+  umbrella header "Pods-FavorPayTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

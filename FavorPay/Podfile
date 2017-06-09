@@ -1,0 +1,22 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'FavorPay' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for FavorPay
+
+  target 'FavorPayTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'FavorPayUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+  
+  pod 'Firebase/Database'
+
+end

@@ -46,13 +46,13 @@
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="StJ-P9-XJD" customClass="FavorPayTextField" customModule="FavorPay" customModuleProvider="target">
                                 <rect key="frame" x="94" y="190" width="187.5" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uB-23-htm" customClass="FavorPayButton" customModule="FavorPay" customModuleProvider="target">
                                 <rect key="frame" x="94" y="228" width="187.5" height="30"/>
@@ -125,25 +125,33 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="f51-WN-DGH">
                                 <rect key="frame" x="24" y="72" width="327" height="167"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cdk-9F-jBt" customClass="FavorPayButton" customModule="FavorPay" customModuleProvider="target">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oLK-1l-3Pa">
                                         <rect key="frame" x="0.0" y="0.0" width="159.5" height="167"/>
-                                        <state key="normal" title="Perform"/>
-                                        <connections>
-                                            <segue destination="FuZ-6X-s1h" kind="show" id="9Kx-B3-V1c"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NrL-di-nel" customClass="FavorPayButton" customModule="FavorPay" customModuleProvider="target">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cdk-9F-jBt" customClass="FavorPayButton" customModule="FavorPay" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="159.5" height="167"/>
+                                                <state key="normal" title="Perform"/>
+                                                <connections>
+                                                    <segue destination="FuZ-6X-s1h" kind="show" id="9Kx-B3-V1c"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="24r-hg-ySi">
                                         <rect key="frame" x="167.5" y="0.0" width="159.5" height="167"/>
-                                        <state key="normal" title="Request"/>
-                                        <connections>
-                                            <segue destination="4uK-QT-qjw" kind="show" id="jYM-ut-f0C"/>
-                                        </connections>
-                                    </button>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NrL-di-nel" customClass="FavorPayButton" customModule="FavorPay" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="159.5" height="167"/>
+                                                <state key="normal" title="Request"/>
+                                                <connections>
+                                                    <segue destination="4uK-QT-qjw" kind="show" id="jYM-ut-f0C"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="Cdk-9F-jBt" firstAttribute="leading" secondItem="f51-WN-DGH" secondAttribute="leading" id="8VT-b2-0Db"/>
-                                    <constraint firstAttribute="trailing" secondItem="NrL-di-nel" secondAttribute="trailing" id="L0T-XZ-6ey"/>
-                                    <constraint firstItem="Cdk-9F-jBt" firstAttribute="width" secondItem="NrL-di-nel" secondAttribute="width" id="YYa-Sr-WNr"/>
+                                    <constraint firstItem="oLK-1l-3Pa" firstAttribute="width" secondItem="NrL-di-nel" secondAttribute="width" id="dfO-JE-Auy"/>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Od3-2M-gHe">
@@ -229,27 +237,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="cell" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t8N-i9-2yu">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t8N-i9-2yu">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="Pz6-BN-yue" style="IBUITableViewCellStyleDefault" id="gED-wK-Tc9">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="goodDeedCell" rowHeight="100" id="vLM-Md-Z3P" customClass="FavorPayTableViewCell" customModule="FavorPay" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gED-wK-Tc9" id="FaJ-F1-se9">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vLM-Md-Z3P" id="ZEN-bN-sCy">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Pz6-BN-yue">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="title" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edj-DU-AQt" customClass="FavorPayLabel" customModule="FavorPay" customModuleProvider="target">
+                                                    <rect key="frame" x="29" y="18" width="34" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="desc" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULP-2j-5ZB" customClass="FavorPayLabel" customModule="FavorPay" customModuleProvider="target">
+                                                    <rect key="frame" x="29" y="47" width="88" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="points" text="Points" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nHi-Yg-GOx" customClass="FavorPayLabel" customModule="FavorPay" customModuleProvider="target">
+                                                    <rect key="frame" x="298" y="18" width="48" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ULP-2j-5ZB" firstAttribute="leading" secondItem="ZEN-bN-sCy" secondAttribute="leadingMargin" constant="21" id="5ok-ab-ahJ"/>
+                                                <constraint firstItem="ULP-2j-5ZB" firstAttribute="top" secondItem="edj-DU-AQt" secondAttribute="bottom" constant="8" id="IGu-Kj-G8l"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="nHi-Yg-GOx" secondAttribute="trailing" constant="21" id="aEo-jt-FBi"/>
+                                                <constraint firstItem="nHi-Yg-GOx" firstAttribute="top" secondItem="ZEN-bN-sCy" secondAttribute="topMargin" constant="10" id="opc-zu-2si"/>
+                                                <constraint firstItem="edj-DU-AQt" firstAttribute="top" secondItem="ZEN-bN-sCy" secondAttribute="topMargin" constant="10" id="rAK-Rs-MVM"/>
+                                                <constraint firstItem="edj-DU-AQt" firstAttribute="leading" secondItem="ZEN-bN-sCy" secondAttribute="leadingMargin" constant="21" id="wXG-FT-Ept"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="desc" destination="ULP-2j-5ZB" id="1tn-gt-Ro8"/>
+                                            <outlet property="points" destination="nHi-Yg-GOx" id="PEf-B2-yk1"/>
+                                            <outlet property="title" destination="edj-DU-AQt" id="p4C-JX-y4t"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -279,12 +311,69 @@
                     <view key="view" contentMode="scaleToFill" id="YFJ-V1-1hb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="F9I-ve-fJw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="historyCell" rowHeight="100" id="sGK-cx-Yy3" customClass="FavorPayTableViewCell" customModule="FavorPay" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sGK-cx-Yy3" id="l8M-8G-xRU">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ady-b1-9nT" customClass="FavorPayLabel" customModule="FavorPay" customModuleProvider="target">
+                                                    <rect key="frame" x="29" y="18" width="34" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJv-Sm-Cja" customClass="FavorPayLabel" customModule="FavorPay" customModuleProvider="target">
+                                                    <rect key="frame" x="29" y="47" width="88" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xew-Bk-khe" customClass="FavorPayLabel" customModule="FavorPay" customModuleProvider="target">
+                                                    <rect key="frame" x="298" y="18" width="48" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Ady-b1-9nT" firstAttribute="top" secondItem="l8M-8G-xRU" secondAttribute="topMargin" constant="10" id="28h-Rq-Uq0"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Xew-Bk-khe" secondAttribute="trailing" constant="21" id="IKL-2h-nz0"/>
+                                                <constraint firstItem="LJv-Sm-Cja" firstAttribute="top" secondItem="Ady-b1-9nT" secondAttribute="bottom" constant="8" id="UbN-gw-1It"/>
+                                                <constraint firstItem="Xew-Bk-khe" firstAttribute="top" secondItem="l8M-8G-xRU" secondAttribute="topMargin" constant="10" id="pgY-Af-P4a"/>
+                                                <constraint firstItem="LJv-Sm-Cja" firstAttribute="leading" secondItem="l8M-8G-xRU" secondAttribute="leadingMargin" constant="21" id="qtx-ZY-uQV"/>
+                                                <constraint firstItem="Ady-b1-9nT" firstAttribute="leading" secondItem="l8M-8G-xRU" secondAttribute="leadingMargin" constant="21" id="tRA-rG-uAt"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="desc" destination="LJv-Sm-Cja" id="AUy-6S-0I0"/>
+                                            <outlet property="points" destination="Xew-Bk-khe" id="DUi-nK-tVo"/>
+                                            <outlet property="title" destination="Ady-b1-9nT" id="suy-7F-Dh7"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="daB-3Y-TuD" id="Mx9-J3-dlg"/>
+                                    <outlet property="delegate" destination="daB-3Y-TuD" id="26h-Jm-eqM"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="view" destination="F9I-ve-fJw" id="GVp-uV-ush"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qnl-bD-Vi0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3561" y="440"/>
+            <point key="canvasLocation" x="3560.8000000000002" y="439.43028485757122"/>
         </scene>
         <!--Contact Us-->
         <scene sceneID="7St-vX-dRH">
@@ -314,7 +403,7 @@
                                 <rect key="frame" x="62.5" y="349" width="250" height="30"/>
                                 <state key="normal" title="Submit"/>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fhm-ux-lMl">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fhm-ux-lMl" customClass="FavorPayTextView" customModule="FavorPay" customModuleProvider="target">
                                 <rect key="frame" x="62.5" y="174" width="250" height="167"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -354,7 +443,66 @@
                     <view key="view" contentMode="scaleToFill" id="Exk-vV-73I">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Unique Identifier" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="TsM-fx-kJd" customClass="FavorPayTextField" customModule="FavorPay" customModuleProvider="target">
+                                <rect key="frame" x="24" y="52" width="327" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Bd9-F8-DNt" customClass="FavorPayTextField" customModule="FavorPay" customModuleProvider="target">
+                                <rect key="frame" x="24" y="90" width="327" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="frH-1l-tx2" customClass="FavorPayTextField" customModule="FavorPay" customModuleProvider="target">
+                                <rect key="frame" x="24" y="128" width="327" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Points" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="YLL-hK-zm4" customClass="FavorPayTextField" customModule="FavorPay" customModuleProvider="target">
+                                <rect key="frame" x="24" y="166" width="327" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1BO-1A-bEA" customClass="FavorPayTextView" customModule="FavorPay" customModuleProvider="target">
+                                <rect key="frame" x="24" y="204" width="327" height="167"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration" label="Description"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJ4-iM-Qq0" customClass="FavorPayButton" customModule="FavorPay" customModuleProvider="target">
+                                <rect key="frame" x="24" y="379" width="327" height="30"/>
+                                <state key="normal" title="Submit"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <accessibility key="accessibilityConfiguration" label="Description"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="TsM-fx-kJd" secondAttribute="trailing" constant="8" id="029-4g-am6"/>
+                            <constraint firstItem="1BO-1A-bEA" firstAttribute="leading" secondItem="Exk-vV-73I" secondAttribute="leadingMargin" constant="8" id="2a5-5J-uWa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Bd9-F8-DNt" secondAttribute="trailing" constant="8" id="3hm-XS-8eU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="frH-1l-tx2" secondAttribute="trailing" constant="8" id="41n-fy-xxy"/>
+                            <constraint firstItem="SJ4-iM-Qq0" firstAttribute="top" secondItem="1BO-1A-bEA" secondAttribute="bottom" constant="8" symbolic="YES" id="9qr-F5-LZ7"/>
+                            <constraint firstItem="Bd9-F8-DNt" firstAttribute="top" secondItem="TsM-fx-kJd" secondAttribute="bottom" constant="8" symbolic="YES" id="BxP-S5-PiR"/>
+                            <constraint firstItem="TsM-fx-kJd" firstAttribute="top" secondItem="JoW-h5-Y9f" secondAttribute="bottom" constant="8" symbolic="YES" id="Cwg-jB-Ghg"/>
+                            <constraint firstItem="frH-1l-tx2" firstAttribute="top" secondItem="Bd9-F8-DNt" secondAttribute="bottom" constant="8" symbolic="YES" id="Nh8-Te-CNp"/>
+                            <constraint firstItem="SJ4-iM-Qq0" firstAttribute="leading" secondItem="Exk-vV-73I" secondAttribute="leadingMargin" constant="8" id="OHd-kj-Mfe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YLL-hK-zm4" secondAttribute="trailing" constant="8" id="Rg5-cn-PDt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1BO-1A-bEA" secondAttribute="trailing" constant="8" id="VjL-i2-wQP"/>
+                            <constraint firstItem="YLL-hK-zm4" firstAttribute="leading" secondItem="Exk-vV-73I" secondAttribute="leadingMargin" constant="8" id="Wt7-9G-uX0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SJ4-iM-Qq0" secondAttribute="trailing" constant="8" id="g0Y-O1-Iq6"/>
+                            <constraint firstItem="1BO-1A-bEA" firstAttribute="top" secondItem="YLL-hK-zm4" secondAttribute="bottom" constant="8" symbolic="YES" id="kBM-T0-Udl"/>
+                            <constraint firstItem="YLL-hK-zm4" firstAttribute="top" secondItem="frH-1l-tx2" secondAttribute="bottom" constant="8" symbolic="YES" id="tAp-ko-6d1"/>
+                            <constraint firstItem="Bd9-F8-DNt" firstAttribute="leading" secondItem="Exk-vV-73I" secondAttribute="leadingMargin" constant="8" id="tQe-gP-EoY"/>
+                            <constraint firstItem="frH-1l-tx2" firstAttribute="leading" secondItem="Exk-vV-73I" secondAttribute="leadingMargin" constant="8" id="uaH-cr-nxc"/>
+                            <constraint firstItem="1BO-1A-bEA" firstAttribute="height" secondItem="Exk-vV-73I" secondAttribute="height" multiplier="1:4" id="wy8-1p-17f"/>
+                            <constraint firstItem="TsM-fx-kJd" firstAttribute="leading" secondItem="Exk-vV-73I" secondAttribute="leadingMargin" constant="8" id="zUR-sg-kNS"/>
+                        </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                 </viewController>
@@ -373,7 +521,54 @@
                     <view key="view" contentMode="scaleToFill" id="71e-ZO-mMa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Unique Identifier" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QAG-tp-DZq" customClass="FavorPayTextField" customModule="FavorPay" customModuleProvider="target">
+                                <rect key="frame" x="16" y="72" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2dv-32-h0y" customClass="FavorPayTextField" customModule="FavorPay" customModuleProvider="target">
+                                <rect key="frame" x="16" y="110" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="50W-bg-TJN" customClass="FavorPayTextField" customModule="FavorPay" customModuleProvider="target">
+                                <rect key="frame" x="16" y="148" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Points" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1N0-bb-BwJ" customClass="FavorPayTextField" customModule="FavorPay" customModuleProvider="target">
+                                <rect key="frame" x="16" y="186" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CYT-TI-59h" customClass="FavorPayButton" customModule="FavorPay" customModuleProvider="target">
+                                <rect key="frame" x="16" y="224" width="343" height="30"/>
+                                <state key="normal" title="Search"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="CYT-TI-59h" secondAttribute="trailing" id="41z-38-bOB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="50W-bg-TJN" secondAttribute="trailing" id="BJL-qg-X9n"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1N0-bb-BwJ" secondAttribute="trailing" id="Bdv-14-xDK"/>
+                            <constraint firstItem="2dv-32-h0y" firstAttribute="top" secondItem="QAG-tp-DZq" secondAttribute="bottom" constant="8" symbolic="YES" id="DPr-Ga-Phw"/>
+                            <constraint firstItem="1N0-bb-BwJ" firstAttribute="top" secondItem="50W-bg-TJN" secondAttribute="bottom" constant="8" symbolic="YES" id="HAy-fN-daa"/>
+                            <constraint firstItem="CYT-TI-59h" firstAttribute="top" secondItem="1N0-bb-BwJ" secondAttribute="bottom" constant="8" symbolic="YES" id="QG6-eQ-eIV"/>
+                            <constraint firstItem="1N0-bb-BwJ" firstAttribute="leading" secondItem="71e-ZO-mMa" secondAttribute="leadingMargin" id="RoM-f5-Ana"/>
+                            <constraint firstItem="2dv-32-h0y" firstAttribute="leading" secondItem="71e-ZO-mMa" secondAttribute="leadingMargin" id="TeU-pT-XL1"/>
+                            <constraint firstItem="50W-bg-TJN" firstAttribute="top" secondItem="2dv-32-h0y" secondAttribute="bottom" constant="8" symbolic="YES" id="WDQ-0D-H37"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2dv-32-h0y" secondAttribute="trailing" id="bjJ-8t-Gkz"/>
+                            <constraint firstItem="50W-bg-TJN" firstAttribute="leading" secondItem="71e-ZO-mMa" secondAttribute="leadingMargin" id="e5F-cE-dP5"/>
+                            <constraint firstItem="CYT-TI-59h" firstAttribute="leading" secondItem="71e-ZO-mMa" secondAttribute="leadingMargin" id="fN8-8C-jUY"/>
+                            <constraint firstItem="QAG-tp-DZq" firstAttribute="leading" secondItem="71e-ZO-mMa" secondAttribute="leadingMargin" id="kg2-il-yMf"/>
+                            <constraint firstItem="QAG-tp-DZq" firstAttribute="top" secondItem="7tB-3J-xEh" secondAttribute="bottom" constant="8" symbolic="YES" id="vsH-Fe-ZAh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QAG-tp-DZq" secondAttribute="trailing" id="wJ6-Qw-fbp"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="searchDisplayController" destination="Zj4-AB-e2D" id="caB-Vg-fVK"/>
@@ -402,12 +597,132 @@
                     <view key="view" contentMode="scaleToFill" id="LP0-0o-wEZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lsb-5F-plJ">
+                                <rect key="frame" x="24" y="72" width="327" height="167"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Fg-Rk-4CE" customClass="FavorPayButton" customModule="FavorPay" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="159.5" height="167"/>
+                                        <state key="normal" title="Badge 1"/>
+                                        <connections>
+                                            <segue destination="Bg4-ZS-ya2" kind="show" id="5J2-K0-jC6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CKH-Pr-ESy" customClass="FavorPayButton" customModule="FavorPay" customModuleProvider="target">
+                                        <rect key="frame" x="167.5" y="0.0" width="159.5" height="167"/>
+                                        <state key="normal" title="Badge 2"/>
+                                        <connections>
+                                            <segue destination="Bg4-ZS-ya2" kind="show" id="hLE-UP-cm0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="2Fg-Rk-4CE" firstAttribute="width" secondItem="CKH-Pr-ESy" secondAttribute="width" id="BdB-5E-O8n"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8N4-7G-I7T">
+                                <rect key="frame" x="24" y="247" width="327" height="167"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RhF-Ja-GRo" customClass="FavorPayButton" customModule="FavorPay" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="159.5" height="167"/>
+                                        <state key="normal" title="Badge 3"/>
+                                        <connections>
+                                            <segue destination="Bg4-ZS-ya2" kind="show" id="5E3-Ix-K3N"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ES-dh-8Bl" customClass="FavorPayButton" customModule="FavorPay" customModuleProvider="target">
+                                        <rect key="frame" x="167.5" y="0.0" width="159.5" height="167"/>
+                                        <state key="normal" title="Badge 4"/>
+                                        <connections>
+                                            <segue destination="Bg4-ZS-ya2" kind="show" id="n3e-EN-Jtb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="RhF-Ja-GRo" firstAttribute="width" secondItem="8ES-dh-8Bl" secondAttribute="width" id="LBa-jQ-XfE"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Org-cm-eJu">
+                                <rect key="frame" x="24" y="422" width="327" height="167"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="plZ-d7-WBT" customClass="FavorPayButton" customModule="FavorPay" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="159.5" height="167"/>
+                                        <state key="normal" title="Badge 5"/>
+                                        <connections>
+                                            <segue destination="Bg4-ZS-ya2" kind="show" id="r65-GP-T9R"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EIy-yz-79e" customClass="FavorPayButton" customModule="FavorPay" customModuleProvider="target">
+                                        <rect key="frame" x="167.5" y="0.0" width="159.5" height="167"/>
+                                        <state key="normal" title="Badge 6"/>
+                                        <connections>
+                                            <segue destination="Bg4-ZS-ya2" kind="show" id="5UW-wU-DQ1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="plZ-d7-WBT" firstAttribute="width" secondItem="EIy-yz-79e" secondAttribute="width" id="i6o-7x-rJG"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Org-cm-eJu" secondAttribute="trailing" constant="8" id="2C2-HN-IIY"/>
+                            <constraint firstItem="8N4-7G-I7T" firstAttribute="height" secondItem="LP0-0o-wEZ" secondAttribute="height" multiplier="1:4" id="64E-Yb-bGH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lsb-5F-plJ" secondAttribute="trailing" constant="8" id="GHL-9l-H8Z"/>
+                            <constraint firstItem="lsb-5F-plJ" firstAttribute="leading" secondItem="LP0-0o-wEZ" secondAttribute="leadingMargin" constant="8" id="Hxg-LH-1XH"/>
+                            <constraint firstItem="8N4-7G-I7T" firstAttribute="leading" secondItem="LP0-0o-wEZ" secondAttribute="leadingMargin" constant="8" id="K9f-6v-M57"/>
+                            <constraint firstItem="lsb-5F-plJ" firstAttribute="height" secondItem="LP0-0o-wEZ" secondAttribute="height" multiplier="1:4" id="NF3-Mc-iYh"/>
+                            <constraint firstItem="Org-cm-eJu" firstAttribute="top" secondItem="8N4-7G-I7T" secondAttribute="bottom" constant="8" id="TQV-wY-lA2"/>
+                            <constraint firstItem="8N4-7G-I7T" firstAttribute="top" secondItem="lsb-5F-plJ" secondAttribute="bottom" constant="8" id="iLP-vL-cAu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8N4-7G-I7T" secondAttribute="trailing" constant="8" id="nRa-km-F6M"/>
+                            <constraint firstItem="Org-cm-eJu" firstAttribute="height" secondItem="LP0-0o-wEZ" secondAttribute="height" multiplier="1:4" id="q6x-Hp-3Aa"/>
+                            <constraint firstItem="Org-cm-eJu" firstAttribute="leading" secondItem="LP0-0o-wEZ" secondAttribute="leadingMargin" constant="8" id="wON-w5-ZxR"/>
+                            <constraint firstItem="lsb-5F-plJ" firstAttribute="top" secondItem="rVb-VY-idB" secondAttribute="bottom" constant="8" symbolic="YES" id="yhJ-Lb-33D"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tva-LY-uMi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4284" y="-434"/>
+        </scene>
+        <!--Badge Information-->
+        <scene sceneID="vJ2-Gn-Bbg">
+            <objects>
+                <viewController title="Badge Information" id="Bg4-ZS-ya2" customClass="FavorPayViewController" customModule="FavorPay" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5Ld-kl-XCs"/>
+                        <viewControllerLayoutGuide type="bottom" id="enx-6o-a48"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LOp-o5-Xqc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gkw-Ep-P9Q">
+                                <rect key="frame" x="24" y="72" width="62.5" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thia is my description about a given badge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOt-zq-ge7">
+                                <rect key="frame" x="24" y="116" width="328" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Gkw-Ep-P9Q" firstAttribute="top" secondItem="5Ld-kl-XCs" secondAttribute="bottom" constant="8" symbolic="YES" id="2Ab-3O-yqV"/>
+                            <constraint firstItem="aOt-zq-ge7" firstAttribute="top" secondItem="Gkw-Ep-P9Q" secondAttribute="bottom" constant="8" symbolic="YES" id="Ksv-0o-mgg"/>
+                            <constraint firstItem="Gkw-Ep-P9Q" firstAttribute="leading" secondItem="LOp-o5-Xqc" secondAttribute="leadingMargin" constant="8" id="Mts-to-RdU"/>
+                            <constraint firstItem="aOt-zq-ge7" firstAttribute="leading" secondItem="LOp-o5-Xqc" secondAttribute="leadingMargin" constant="8" id="YVj-ah-ife"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HWK-0g-CmG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5160.8000000000002" y="-434.03298350824593"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="FN2-wg-F2Y">
@@ -433,18 +748,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L8f-8h-OdU">
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="L8f-8h-OdU">
                                 <rect key="frame" x="94" y="266" width="187.5" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0Z-BZ-8Hz" customClass="FavorPayButton" customModule="FavorPay" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="93.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="89.5" height="30"/>
                                         <state key="normal" title="Cancel"/>
                                         <connections>
                                             <segue destination="BYZ-38-t0r" kind="show" id="zXK-Yg-wO5"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="emX-Fc-TdI" customClass="FavorPayButton" customModule="FavorPay" customModuleProvider="target">
-                                        <rect key="frame" x="93.5" y="0.0" width="94" height="30"/>
+                                        <rect key="frame" x="97.5" y="0.0" width="90" height="30"/>
                                         <state key="normal" title="Submit"/>
                                         <connections>
                                             <segue destination="xDF-fa-qT0" kind="show" id="WIQ-DZ-fhP"/>
@@ -494,5 +809,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="WIQ-DZ-fhP"/>
+        <segue reference="r65-GP-T9R"/>
     </inferredMetricsTieBreakers>
 </document>

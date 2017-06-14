@@ -19,7 +19,6 @@
 		220463AD1EDA52B200857F04 /* FavorPayTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220463AC1EDA52B200857F04 /* FavorPayTextField.swift */; };
 		220463AF1EDA52F200857F04 /* FavorPayLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220463AE1EDA52F200857F04 /* FavorPayLabel.swift */; };
 		220463B11EDB61EC00857F04 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220463B01EDB61EC00857F04 /* RegisterViewController.swift */; };
-		220463B61EDB685800857F04 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220463B51EDB685800857F04 /* MainViewController.swift */; };
 		220463B91EDB6D5B00857F04 /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220463B81EDB6D5B00857F04 /* RequestViewController.swift */; };
 		220463BB1EDB6D7300857F04 /* PerformViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220463BA1EDB6D7300857F04 /* PerformViewController.swift */; };
 		220463BD1EDB701B00857F04 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220463BC1EDB701B00857F04 /* SearchViewController.swift */; };
@@ -30,7 +29,7 @@
 		224DF2E41EE615C2008D4DD9 /* GoodDeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224DF2E31EE615C2008D4DD9 /* GoodDeed.swift */; };
 		224DF2E61EE659B0008D4DD9 /* FavorPayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224DF2E51EE659B0008D4DD9 /* FavorPayTableViewCell.swift */; };
 		224DF2E81EE66247008D4DD9 /* FavorPayTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224DF2E71EE66247008D4DD9 /* FavorPayTextView.swift */; };
-		224DF2EC1EE744D7008D4DD9 /* FavorPayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224DF2EB1EE744D7008D4DD9 /* FavorPayTableViewController.swift */; };
+		228FB4291EF0C7310056CDDE /* FavorPayTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228FB4281EF0C7310056CDDE /* FavorPayTabViewController.swift */; };
 		3B38B6D161F35E92BCA783A4 /* Pods_FavorPayTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A4E81A5D5A61DBB6811890 /* Pods_FavorPayTests.framework */; };
 		4BABCCF4A0E055152F4E0F73 /* Pods_FavorPayUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A376BB5F3869F8A0024750 /* Pods_FavorPayUITests.framework */; };
 		DF92F6AA10DC25E12054BE08 /* Pods_FavorPay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 886B9B68DBF114329EFA115E /* Pods_FavorPay.framework */; };
@@ -72,7 +71,6 @@
 		220463AC1EDA52B200857F04 /* FavorPayTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavorPayTextField.swift; sourceTree = "<group>"; };
 		220463AE1EDA52F200857F04 /* FavorPayLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavorPayLabel.swift; sourceTree = "<group>"; };
 		220463B01EDB61EC00857F04 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		220463B51EDB685800857F04 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		220463B81EDB6D5B00857F04 /* RequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
 		220463BA1EDB6D7300857F04 /* PerformViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformViewController.swift; sourceTree = "<group>"; };
 		220463BC1EDB701B00857F04 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -83,7 +81,7 @@
 		224DF2E31EE615C2008D4DD9 /* GoodDeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodDeed.swift; sourceTree = "<group>"; };
 		224DF2E51EE659B0008D4DD9 /* FavorPayTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavorPayTableViewCell.swift; sourceTree = "<group>"; };
 		224DF2E71EE66247008D4DD9 /* FavorPayTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavorPayTextView.swift; sourceTree = "<group>"; };
-		224DF2EB1EE744D7008D4DD9 /* FavorPayTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavorPayTableViewController.swift; sourceTree = "<group>"; };
+		228FB4281EF0C7310056CDDE /* FavorPayTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavorPayTabViewController.swift; sourceTree = "<group>"; };
 		3EA426A9D02032CD92F3FF04 /* Pods-FavorPayUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FavorPayUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FavorPayUITests/Pods-FavorPayUITests.release.xcconfig"; sourceTree = "<group>"; };
 		52A4E81A5D5A61DBB6811890 /* Pods_FavorPayTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FavorPayTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DD6C2017DA61AD1DAC4E61E /* Pods-FavorPayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FavorPayTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FavorPayTests/Pods-FavorPayTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -188,10 +186,9 @@
 			isa = PBXGroup;
 			children = (
 				220463AA1EDA525D00857F04 /* FavorPayViewController.swift */,
-				224DF2EB1EE744D7008D4DD9 /* FavorPayTableViewController.swift */,
+				228FB4281EF0C7310056CDDE /* FavorPayTabViewController.swift */,
 				220463B01EDB61EC00857F04 /* RegisterViewController.swift */,
 				2204637C1EDA4B5E00857F04 /* LoginViewController.swift */,
-				220463B51EDB685800857F04 /* MainViewController.swift */,
 				220463B81EDB6D5B00857F04 /* RequestViewController.swift */,
 				220463BA1EDB6D7300857F04 /* PerformViewController.swift */,
 				220463BC1EDB701B00857F04 /* SearchViewController.swift */,
@@ -533,11 +530,10 @@
 				224DF2E41EE615C2008D4DD9 /* GoodDeed.swift in Sources */,
 				220463BB1EDB6D7300857F04 /* PerformViewController.swift in Sources */,
 				220463AB1EDA525D00857F04 /* FavorPayViewController.swift in Sources */,
+				228FB4291EF0C7310056CDDE /* FavorPayTabViewController.swift in Sources */,
 				220463B91EDB6D5B00857F04 /* RequestViewController.swift in Sources */,
 				220463C31EDB706400857F04 /* ContactUsViewController.swift in Sources */,
 				220463AF1EDA52F200857F04 /* FavorPayLabel.swift in Sources */,
-				220463B61EDB685800857F04 /* MainViewController.swift in Sources */,
-				224DF2EC1EE744D7008D4DD9 /* FavorPayTableViewController.swift in Sources */,
 				220463C11EDB705200857F04 /* BadgesViewController.swift in Sources */,
 				2204637B1EDA4B5E00857F04 /* AppDelegate.swift in Sources */,
 			);

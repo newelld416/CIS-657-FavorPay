@@ -30,9 +30,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.statusBarStyle = UIStatusBarStyle.lightContent
         
         let navAppearance = UINavigationBar.appearance()
-        navAppearance.barTintColor = THEME_COLOR4
-        navAppearance.tintColor = THEME_COLOR2
-        navAppearance.titleTextAttributes = [NSForegroundColorAttributeName : THEME_COLOR2]
+        navAppearance.barTintColor = THEME_COLOR5
+        navAppearance.tintColor = THEME_COLOR4
+        navAppearance.titleTextAttributes = [NSForegroundColorAttributeName : THEME_COLOR4]
         navAppearance.isTranslucent = false
         
         FirebaseApp.configure()

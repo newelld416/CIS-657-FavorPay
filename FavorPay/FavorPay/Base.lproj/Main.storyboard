@@ -34,7 +34,9 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMv-eC-G4I">
                                         <rect key="frame" x="195.5" y="0.0" width="80" height="30"/>
-                                        <state key="normal" title="Get Started"/>
+                                        <state key="normal" title="Get Started">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <segue destination="4NJ-aG-qfR" kind="show" id="191-zd-DKG"/>
                                         </connections>
@@ -56,8 +58,11 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uB-23-htm" customClass="FavorPayButton" customModule="FavorPay" customModuleProvider="target">
                                 <rect key="frame" x="94" y="228" width="187.5" height="30"/>
-                                <state key="normal" title="Login"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
+                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hR3-Ye-SwX"/>
                                     <segue destination="xDF-fa-qT0" kind="show" id="uGi-hK-ppB"/>
                                 </connections>
                             </button>
@@ -89,10 +94,43 @@
                             <constraint firstItem="5uB-23-htm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="waE-Ms-CAh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="email" destination="VIZ-8w-ajS" id="0sB-qN-fe5"/>
+                        <outlet property="password" destination="StJ-P9-XJD" id="gST-5m-EoZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+        <!--FavorPay-->
+        <scene sceneID="DQJ-Sd-Awo">
+            <objects>
+                <tabBarController id="INM-oA-sf0" customClass="FavorPayTabViewController" customModule="FavorPay" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="FavorPay" id="e99-A2-OjH">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="lXG-YO-ZTW">
+                            <connections>
+                                <action selector="logout:" destination="INM-oA-sf0" id="eAE-aE-bcw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="PXY-TH-yw9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.98039215690000003" green="0.3803921569" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.56470588235294117" green="0.61176470588235299" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="FuZ-6X-s1h" kind="relationship" relationship="viewControllers" id="1Ib-gw-tnN"/>
+                        <segue destination="4uK-QT-qjw" kind="relationship" relationship="viewControllers" id="JlY-LR-04k"/>
+                        <segue destination="E3X-i3-WTj" kind="relationship" relationship="viewControllers" id="xh9-bR-4Vw"/>
+                        <segue destination="daB-3Y-TuD" kind="relationship" relationship="viewControllers" id="qrd-hV-qKQ"/>
+                        <segue destination="x9c-k5-1hc" kind="relationship" relationship="viewControllers" id="hHm-cq-LnV"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yI8-HU-Hum" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1982" y="137"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7Rg-m4-Jeh">
@@ -103,127 +141,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="NFg-Je-0px" kind="relationship" relationship="rootViewController" id="G9P-dt-khj"/>
+                        <segue destination="INM-oA-sf0" kind="relationship" relationship="rootViewController" id="Ri0-z8-Ovo"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s2G-mT-hQP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1186" y="137"/>
-        </scene>
-        <!--FavorPay-->
-        <scene sceneID="2MG-Qj-SS0">
-            <objects>
-                <viewController id="NFg-Je-0px" customClass="FavorPayViewController" customModule="FavorPay" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="aAp-mV-xge"/>
-                        <viewControllerLayoutGuide type="bottom" id="F1n-xI-lPK"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="De9-l0-MFd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="f51-WN-DGH">
-                                <rect key="frame" x="24" y="72" width="327" height="167"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oLK-1l-3Pa">
-                                        <rect key="frame" x="0.0" y="0.0" width="159.5" height="167"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cdk-9F-jBt" customClass="FavorPayButton" customModule="FavorPay" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="159.5" height="167"/>
-                                                <state key="normal" title="Perform"/>
-                                                <connections>
-                                                    <segue destination="FuZ-6X-s1h" kind="show" id="9Kx-B3-V1c"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="24r-hg-ySi">
-                                        <rect key="frame" x="167.5" y="0.0" width="159.5" height="167"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NrL-di-nel" customClass="FavorPayButton" customModule="FavorPay" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="159.5" height="167"/>
-                                                <state key="normal" title="Request"/>
-                                                <connections>
-                                                    <segue destination="4uK-QT-qjw" kind="show" id="jYM-ut-f0C"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="oLK-1l-3Pa" firstAttribute="width" secondItem="NrL-di-nel" secondAttribute="width" id="dfO-JE-Auy"/>
-                                </constraints>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Od3-2M-gHe">
-                                <rect key="frame" x="24" y="247" width="327" height="166.5"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5tk-A8-NT2" customClass="FavorPayButton" customModule="FavorPay" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="159.5" height="166.5"/>
-                                        <state key="normal" title="Search"/>
-                                        <connections>
-                                            <segue destination="E3X-i3-WTj" kind="show" id="4WF-aa-nBz"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ZQ-EV-3s9" customClass="FavorPayButton" customModule="FavorPay" customModuleProvider="target">
-                                        <rect key="frame" x="167.5" y="0.0" width="159.5" height="166.5"/>
-                                        <state key="normal" title="History"/>
-                                        <connections>
-                                            <segue destination="daB-3Y-TuD" kind="show" id="IVU-eZ-L7l"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="5tk-A8-NT2" firstAttribute="width" secondItem="5ZQ-EV-3s9" secondAttribute="width" id="EAJ-o3-Ljq"/>
-                                    <constraint firstAttribute="trailing" secondItem="5ZQ-EV-3s9" secondAttribute="trailing" id="LoN-DL-342"/>
-                                    <constraint firstItem="5tk-A8-NT2" firstAttribute="leading" secondItem="Od3-2M-gHe" secondAttribute="leading" id="UFd-Yw-6B9"/>
-                                </constraints>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sI0-YA-WbU">
-                                <rect key="frame" x="24" y="421.5" width="327" height="167"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgL-oo-oIo" customClass="FavorPayButton" customModule="FavorPay" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="159.5" height="167"/>
-                                        <state key="normal" title="Badges"/>
-                                        <connections>
-                                            <segue destination="x9c-k5-1hc" kind="show" id="rdd-6Y-dM2"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gx-pb-wdV" customClass="FavorPayButton" customModule="FavorPay" customModuleProvider="target">
-                                        <rect key="frame" x="167.5" y="0.0" width="159.5" height="167"/>
-                                        <state key="normal" title="Contact Us"/>
-                                        <connections>
-                                            <segue destination="5yZ-nq-uOV" kind="show" id="HfP-i6-BTa"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="dgL-oo-oIo" firstAttribute="leading" secondItem="sI0-YA-WbU" secondAttribute="leading" id="2rP-Y2-zlL"/>
-                                    <constraint firstAttribute="trailing" secondItem="1gx-pb-wdV" secondAttribute="trailing" id="Fed-wI-au2"/>
-                                    <constraint firstItem="dgL-oo-oIo" firstAttribute="width" secondItem="1gx-pb-wdV" secondAttribute="width" id="boX-uf-dkN"/>
-                                </constraints>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Od3-2M-gHe" firstAttribute="height" secondItem="De9-l0-MFd" secondAttribute="height" multiplier="1:4" id="AJY-Z4-mmN"/>
-                            <constraint firstItem="f51-WN-DGH" firstAttribute="height" secondItem="De9-l0-MFd" secondAttribute="height" multiplier="1:4" id="AlX-cg-BJw"/>
-                            <constraint firstItem="f51-WN-DGH" firstAttribute="top" secondItem="aAp-mV-xge" secondAttribute="bottom" constant="8" symbolic="YES" id="EJy-fB-XfF"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="f51-WN-DGH" secondAttribute="trailing" constant="8" id="WxL-Ci-1Qs"/>
-                            <constraint firstItem="Od3-2M-gHe" firstAttribute="leading" secondItem="De9-l0-MFd" secondAttribute="leadingMargin" constant="8" id="dqM-La-kW8"/>
-                            <constraint firstItem="sI0-YA-WbU" firstAttribute="top" secondItem="Od3-2M-gHe" secondAttribute="bottom" constant="8" symbolic="YES" id="f61-zT-kEU"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="sI0-YA-WbU" secondAttribute="trailing" constant="8" id="h8N-8I-WhD"/>
-                            <constraint firstItem="f51-WN-DGH" firstAttribute="leading" secondItem="De9-l0-MFd" secondAttribute="leadingMargin" constant="8" id="i8R-np-aXH"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Od3-2M-gHe" secondAttribute="trailing" constant="8" id="iUc-H5-EbY"/>
-                            <constraint firstItem="Od3-2M-gHe" firstAttribute="top" secondItem="f51-WN-DGH" secondAttribute="bottom" constant="8" symbolic="YES" id="tS8-XO-kQA"/>
-                            <constraint firstItem="sI0-YA-WbU" firstAttribute="height" secondItem="De9-l0-MFd" secondAttribute="height" multiplier="1:4" id="tfk-Yz-YGk"/>
-                            <constraint firstItem="sI0-YA-WbU" firstAttribute="leading" secondItem="De9-l0-MFd" secondAttribute="leadingMargin" constant="8" id="zgb-1Q-Uwb"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="FavorPay" id="Pt1-cl-Bw2"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="e2L-UQ-LYW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2039" y="137"/>
         </scene>
         <!--Perform-->
         <scene sceneID="7pw-xm-793">
@@ -237,9 +160,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t8N-i9-2yu">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t8N-i9-2yu">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="goodDeedCell" rowHeight="100" id="vLM-Md-Z3P" customClass="FavorPayTableViewCell" customModule="FavorPay" customModuleProvider="target">
@@ -262,7 +184,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="points" text="Points" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nHi-Yg-GOx" customClass="FavorPayLabel" customModule="FavorPay" customModuleProvider="target">
-                                                    <rect key="frame" x="298" y="18" width="48" height="21"/>
+                                                    <rect key="frame" x="590" y="18" width="48" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -291,14 +213,21 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="t8N-i9-2yu" firstAttribute="leading" secondItem="fHw-7V-TDa" secondAttribute="leading" id="AQw-KG-dkm"/>
+                            <constraint firstAttribute="trailing" secondItem="t8N-i9-2yu" secondAttribute="trailing" id="Frz-eq-0S3"/>
+                            <constraint firstAttribute="bottom" secondItem="t8N-i9-2yu" secondAttribute="bottom" id="Hit-kw-YMX"/>
+                            <constraint firstItem="t8N-i9-2yu" firstAttribute="top" secondItem="fHw-7V-TDa" secondAttribute="top" id="rzb-gZ-Hyw"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Perform" image="perform" id="XY4-bw-znp"/>
                     <connections>
                         <outlet property="view" destination="t8N-i9-2yu" id="fdw-Ea-AYm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="heV-zi-X4V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2800.8000000000002" y="-433.13343328335833"/>
+            <point key="canvasLocation" x="2809" y="-143"/>
         </scene>
         <!--History-->
         <scene sceneID="XDR-Sz-7Ny">
@@ -312,9 +241,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="F9I-ve-fJw">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="F9I-ve-fJw">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="historyCell" rowHeight="100" id="sGK-cx-Yy3" customClass="FavorPayTableViewCell" customModule="FavorPay" customModuleProvider="target">
@@ -337,7 +265,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xew-Bk-khe" customClass="FavorPayLabel" customModule="FavorPay" customModuleProvider="target">
-                                                    <rect key="frame" x="298" y="18" width="48" height="21"/>
+                                                    <rect key="frame" x="590" y="18" width="48" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -366,71 +294,21 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="F9I-ve-fJw" secondAttribute="trailing" id="BYF-HP-4eT"/>
+                            <constraint firstItem="F9I-ve-fJw" firstAttribute="top" secondItem="YFJ-V1-1hb" secondAttribute="top" id="WFV-3w-azK"/>
+                            <constraint firstItem="F9I-ve-fJw" firstAttribute="leading" secondItem="YFJ-V1-1hb" secondAttribute="leading" id="Znt-7W-7S2"/>
+                            <constraint firstAttribute="bottom" secondItem="F9I-ve-fJw" secondAttribute="bottom" id="pj2-HM-3oZ"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="History" image="history" id="Mib-Pg-9iM"/>
                     <connections>
                         <outlet property="view" destination="F9I-ve-fJw" id="GVp-uV-ush"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qnl-bD-Vi0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3560.8000000000002" y="439.43028485757122"/>
-        </scene>
-        <!--Contact Us-->
-        <scene sceneID="7St-vX-dRH">
-            <objects>
-                <viewController title="Contact Us" id="5yZ-nq-uOV" customClass="ContactUsViewController" customModule="FavorPay" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="k3g-uo-Sl1"/>
-                        <viewControllerLayoutGuide type="bottom" id="IeZ-ny-ivF"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="coH-oe-9ZY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UQT-BJ-eff" customClass="FavorPayTextField" customModule="FavorPay" customModuleProvider="target">
-                                <rect key="frame" x="62.5" y="98" width="250" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Nd-zU-dti" customClass="FavorPayTextField" customModule="FavorPay" customModuleProvider="target">
-                                <rect key="frame" x="62.5" y="136" width="250" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zmx-kS-rKX" customClass="FavorPayButton" customModule="FavorPay" customModuleProvider="target">
-                                <rect key="frame" x="62.5" y="349" width="250" height="30"/>
-                                <state key="normal" title="Submit"/>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fhm-ux-lMl" customClass="FavorPayTextView" customModule="FavorPay" customModuleProvider="target">
-                                <rect key="frame" x="62.5" y="174" width="250" height="167"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Zmx-kS-rKX" firstAttribute="width" secondItem="fhm-ux-lMl" secondAttribute="width" id="2V2-rS-956"/>
-                            <constraint firstItem="Zmx-kS-rKX" firstAttribute="top" secondItem="fhm-ux-lMl" secondAttribute="bottom" constant="8" symbolic="YES" id="3MT-Wq-ob7"/>
-                            <constraint firstItem="fhm-ux-lMl" firstAttribute="centerX" secondItem="coH-oe-9ZY" secondAttribute="centerX" id="5PV-ek-RIP"/>
-                            <constraint firstItem="fhm-ux-lMl" firstAttribute="height" secondItem="coH-oe-9ZY" secondAttribute="height" multiplier="1:4" id="Brt-E1-3pC"/>
-                            <constraint firstItem="4Nd-zU-dti" firstAttribute="width" secondItem="UQT-BJ-eff" secondAttribute="width" id="Hqe-gX-sK5"/>
-                            <constraint firstItem="fhm-ux-lMl" firstAttribute="width" secondItem="4Nd-zU-dti" secondAttribute="width" id="S5K-RA-jHR"/>
-                            <constraint firstItem="Zmx-kS-rKX" firstAttribute="centerX" secondItem="coH-oe-9ZY" secondAttribute="centerX" id="WLt-zO-lWw"/>
-                            <constraint firstItem="4Nd-zU-dti" firstAttribute="centerX" secondItem="coH-oe-9ZY" secondAttribute="centerX" id="Y4l-VG-pqB"/>
-                            <constraint firstItem="UQT-BJ-eff" firstAttribute="width" secondItem="coH-oe-9ZY" secondAttribute="width" multiplier="1:1.5" id="dxy-II-TdT"/>
-                            <constraint firstItem="fhm-ux-lMl" firstAttribute="top" secondItem="4Nd-zU-dti" secondAttribute="bottom" constant="8" symbolic="YES" id="ehC-ep-biQ"/>
-                            <constraint firstItem="UQT-BJ-eff" firstAttribute="centerX" secondItem="coH-oe-9ZY" secondAttribute="centerX" id="hHU-2M-Pjq"/>
-                            <constraint firstItem="UQT-BJ-eff" firstAttribute="top" secondItem="k3g-uo-Sl1" secondAttribute="bottom" constant="34" id="xCU-Ko-tax"/>
-                            <constraint firstItem="4Nd-zU-dti" firstAttribute="top" secondItem="UQT-BJ-eff" secondAttribute="bottom" constant="8" symbolic="YES" id="yRP-A8-yXC"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mzB-kw-bIX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4284" y="440"/>
+            <point key="canvasLocation" x="3719" y="573"/>
         </scene>
         <!--Request-->
         <scene sceneID="ufl-cV-hjQ">
@@ -456,27 +334,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="frH-1l-tx2" customClass="FavorPayTextField" customModule="FavorPay" customModuleProvider="target">
-                                <rect key="frame" x="24" y="128" width="327" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Points" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="YLL-hK-zm4" customClass="FavorPayTextField" customModule="FavorPay" customModuleProvider="target">
-                                <rect key="frame" x="24" y="166" width="327" height="30"/>
+                                <rect key="frame" x="24" y="128" width="327" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1BO-1A-bEA" customClass="FavorPayTextView" customModule="FavorPay" customModuleProvider="target">
-                                <rect key="frame" x="24" y="204" width="327" height="167"/>
+                                <rect key="frame" x="24" y="166" width="327" height="167"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration" label="Description"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJ4-iM-Qq0" customClass="FavorPayButton" customModule="FavorPay" customModuleProvider="target">
-                                <rect key="frame" x="24" y="379" width="327" height="30"/>
+                                <rect key="frame" x="24" y="341" width="327" height="30"/>
                                 <state key="normal" title="Submit"/>
                             </button>
                         </subviews>
@@ -486,29 +358,27 @@
                             <constraint firstAttribute="trailingMargin" secondItem="TsM-fx-kJd" secondAttribute="trailing" constant="8" id="029-4g-am6"/>
                             <constraint firstItem="1BO-1A-bEA" firstAttribute="leading" secondItem="Exk-vV-73I" secondAttribute="leadingMargin" constant="8" id="2a5-5J-uWa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Bd9-F8-DNt" secondAttribute="trailing" constant="8" id="3hm-XS-8eU"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="frH-1l-tx2" secondAttribute="trailing" constant="8" id="41n-fy-xxy"/>
+                            <constraint firstItem="YLL-hK-zm4" firstAttribute="top" secondItem="Bd9-F8-DNt" secondAttribute="bottom" constant="8" symbolic="YES" id="5m8-Zm-pOQ"/>
                             <constraint firstItem="SJ4-iM-Qq0" firstAttribute="top" secondItem="1BO-1A-bEA" secondAttribute="bottom" constant="8" symbolic="YES" id="9qr-F5-LZ7"/>
                             <constraint firstItem="Bd9-F8-DNt" firstAttribute="top" secondItem="TsM-fx-kJd" secondAttribute="bottom" constant="8" symbolic="YES" id="BxP-S5-PiR"/>
                             <constraint firstItem="TsM-fx-kJd" firstAttribute="top" secondItem="JoW-h5-Y9f" secondAttribute="bottom" constant="8" symbolic="YES" id="Cwg-jB-Ghg"/>
-                            <constraint firstItem="frH-1l-tx2" firstAttribute="top" secondItem="Bd9-F8-DNt" secondAttribute="bottom" constant="8" symbolic="YES" id="Nh8-Te-CNp"/>
                             <constraint firstItem="SJ4-iM-Qq0" firstAttribute="leading" secondItem="Exk-vV-73I" secondAttribute="leadingMargin" constant="8" id="OHd-kj-Mfe"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YLL-hK-zm4" secondAttribute="trailing" constant="8" id="Rg5-cn-PDt"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1BO-1A-bEA" secondAttribute="trailing" constant="8" id="VjL-i2-wQP"/>
                             <constraint firstItem="YLL-hK-zm4" firstAttribute="leading" secondItem="Exk-vV-73I" secondAttribute="leadingMargin" constant="8" id="Wt7-9G-uX0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SJ4-iM-Qq0" secondAttribute="trailing" constant="8" id="g0Y-O1-Iq6"/>
                             <constraint firstItem="1BO-1A-bEA" firstAttribute="top" secondItem="YLL-hK-zm4" secondAttribute="bottom" constant="8" symbolic="YES" id="kBM-T0-Udl"/>
-                            <constraint firstItem="YLL-hK-zm4" firstAttribute="top" secondItem="frH-1l-tx2" secondAttribute="bottom" constant="8" symbolic="YES" id="tAp-ko-6d1"/>
                             <constraint firstItem="Bd9-F8-DNt" firstAttribute="leading" secondItem="Exk-vV-73I" secondAttribute="leadingMargin" constant="8" id="tQe-gP-EoY"/>
-                            <constraint firstItem="frH-1l-tx2" firstAttribute="leading" secondItem="Exk-vV-73I" secondAttribute="leadingMargin" constant="8" id="uaH-cr-nxc"/>
                             <constraint firstItem="1BO-1A-bEA" firstAttribute="height" secondItem="Exk-vV-73I" secondAttribute="height" multiplier="1:4" id="wy8-1p-17f"/>
                             <constraint firstItem="TsM-fx-kJd" firstAttribute="leading" secondItem="Exk-vV-73I" secondAttribute="leadingMargin" constant="8" id="zUR-sg-kNS"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Request" image="request" id="NKh-t7-T1V"/>
                     <nil key="simulatedStatusBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d4H-DH-PMy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2801" y="439"/>
+            <point key="canvasLocation" x="2809" y="573"/>
         </scene>
         <!--Search-->
         <scene sceneID="8MR-Bt-4Z5">
@@ -534,42 +404,34 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="50W-bg-TJN" customClass="FavorPayTextField" customModule="FavorPay" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Points" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1N0-bb-BwJ" customClass="FavorPayTextField" customModule="FavorPay" customModuleProvider="target">
                                 <rect key="frame" x="16" y="148" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Points" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1N0-bb-BwJ" customClass="FavorPayTextField" customModule="FavorPay" customModuleProvider="target">
-                                <rect key="frame" x="16" y="186" width="343" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CYT-TI-59h" customClass="FavorPayButton" customModule="FavorPay" customModuleProvider="target">
-                                <rect key="frame" x="16" y="224" width="343" height="30"/>
+                                <rect key="frame" x="16" y="186" width="343" height="30"/>
                                 <state key="normal" title="Search"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="CYT-TI-59h" secondAttribute="trailing" id="41z-38-bOB"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="50W-bg-TJN" secondAttribute="trailing" id="BJL-qg-X9n"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1N0-bb-BwJ" secondAttribute="trailing" id="Bdv-14-xDK"/>
                             <constraint firstItem="2dv-32-h0y" firstAttribute="top" secondItem="QAG-tp-DZq" secondAttribute="bottom" constant="8" symbolic="YES" id="DPr-Ga-Phw"/>
-                            <constraint firstItem="1N0-bb-BwJ" firstAttribute="top" secondItem="50W-bg-TJN" secondAttribute="bottom" constant="8" symbolic="YES" id="HAy-fN-daa"/>
                             <constraint firstItem="CYT-TI-59h" firstAttribute="top" secondItem="1N0-bb-BwJ" secondAttribute="bottom" constant="8" symbolic="YES" id="QG6-eQ-eIV"/>
                             <constraint firstItem="1N0-bb-BwJ" firstAttribute="leading" secondItem="71e-ZO-mMa" secondAttribute="leadingMargin" id="RoM-f5-Ana"/>
                             <constraint firstItem="2dv-32-h0y" firstAttribute="leading" secondItem="71e-ZO-mMa" secondAttribute="leadingMargin" id="TeU-pT-XL1"/>
-                            <constraint firstItem="50W-bg-TJN" firstAttribute="top" secondItem="2dv-32-h0y" secondAttribute="bottom" constant="8" symbolic="YES" id="WDQ-0D-H37"/>
+                            <constraint firstItem="1N0-bb-BwJ" firstAttribute="top" secondItem="2dv-32-h0y" secondAttribute="bottom" constant="8" symbolic="YES" id="XgS-zT-Xu7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2dv-32-h0y" secondAttribute="trailing" id="bjJ-8t-Gkz"/>
-                            <constraint firstItem="50W-bg-TJN" firstAttribute="leading" secondItem="71e-ZO-mMa" secondAttribute="leadingMargin" id="e5F-cE-dP5"/>
                             <constraint firstItem="CYT-TI-59h" firstAttribute="leading" secondItem="71e-ZO-mMa" secondAttribute="leadingMargin" id="fN8-8C-jUY"/>
                             <constraint firstItem="QAG-tp-DZq" firstAttribute="leading" secondItem="71e-ZO-mMa" secondAttribute="leadingMargin" id="kg2-il-yMf"/>
                             <constraint firstItem="QAG-tp-DZq" firstAttribute="top" secondItem="7tB-3J-xEh" secondAttribute="bottom" constant="8" symbolic="YES" id="vsH-Fe-ZAh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="QAG-tp-DZq" secondAttribute="trailing" id="wJ6-Qw-fbp"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Search" image="search" id="1HI-Bz-92a"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="Zj4-AB-e2D" id="caB-Vg-fVK"/>
                     </connections>
@@ -584,7 +446,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="3561" y="-433"/>
+            <point key="canvasLocation" x="3686" y="-143"/>
         </scene>
         <!--Badges-->
         <scene sceneID="jcR-NF-5IW">
@@ -621,17 +483,17 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8N4-7G-I7T">
-                                <rect key="frame" x="24" y="247" width="327" height="167"/>
+                                <rect key="frame" x="24" y="247" width="327" height="166.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RhF-Ja-GRo" customClass="FavorPayButton" customModule="FavorPay" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="159.5" height="167"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="159.5" height="166.5"/>
                                         <state key="normal" title="Badge 3"/>
                                         <connections>
                                             <segue destination="Bg4-ZS-ya2" kind="show" id="5E3-Ix-K3N"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ES-dh-8Bl" customClass="FavorPayButton" customModule="FavorPay" customModuleProvider="target">
-                                        <rect key="frame" x="167.5" y="0.0" width="159.5" height="167"/>
+                                        <rect key="frame" x="167.5" y="0.0" width="159.5" height="166.5"/>
                                         <state key="normal" title="Badge 4"/>
                                         <connections>
                                             <segue destination="Bg4-ZS-ya2" kind="show" id="n3e-EN-Jtb"/>
@@ -643,7 +505,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Org-cm-eJu">
-                                <rect key="frame" x="24" y="422" width="327" height="167"/>
+                                <rect key="frame" x="24" y="421.5" width="327" height="167"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="plZ-d7-WBT" customClass="FavorPayButton" customModule="FavorPay" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="159.5" height="167"/>
@@ -681,10 +543,11 @@
                             <constraint firstItem="lsb-5F-plJ" firstAttribute="top" secondItem="rVb-VY-idB" secondAttribute="bottom" constant="8" symbolic="YES" id="yhJ-Lb-33D"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Badges" image="badges" id="TSh-hK-k7t"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tva-LY-uMi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4284" y="-434"/>
+            <point key="canvasLocation" x="4574" y="-143"/>
         </scene>
         <!--Badge Information-->
         <scene sceneID="vJ2-Gn-Bbg">
@@ -722,7 +585,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HWK-0g-CmG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5160.8000000000002" y="-434.03298350824593"/>
+            <point key="canvasLocation" x="5609" y="-143"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="FN2-wg-F2Y">
@@ -762,6 +625,7 @@
                                         <rect key="frame" x="97.5" y="0.0" width="90" height="30"/>
                                         <state key="normal" title="Submit"/>
                                         <connections>
+                                            <action selector="createUser:" destination="4NJ-aG-qfR" eventType="touchUpInside" id="1B5-gJ-SJ1"/>
                                             <segue destination="xDF-fa-qT0" kind="show" id="WIQ-DZ-fhP"/>
                                         </connections>
                                     </button>
@@ -801,14 +665,26 @@
                             <constraint firstItem="L8f-8h-OdU" firstAttribute="centerX" secondItem="zC0-6U-gVI" secondAttribute="centerX" id="v2t-L7-fpt"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="email" destination="omE-J8-6ev" id="H7w-39-53M"/>
+                        <outlet property="password" destination="xyQ-uR-dR4" id="d56-Zn-Egj"/>
+                        <outlet property="passwordConfirm" destination="MQw-oS-VKk" id="U2y-Pr-nfX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IUK-Uo-CiV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="916.1919040479761"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="badges" width="32" height="32"/>
+        <image name="history" width="25" height="25"/>
+        <image name="perform" width="25" height="25"/>
+        <image name="request" width="25" height="25"/>
+        <image name="search" width="25" height="25"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="WIQ-DZ-fhP"/>
-        <segue reference="r65-GP-T9R"/>
+        <segue reference="5UW-wU-DQ1"/>
     </inferredMetricsTieBreakers>
 </document>

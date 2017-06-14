@@ -12,6 +12,15 @@ class HistoryViewController: FavorPayViewController, UITableViewDelegate, UITabl
     
     var goodDeeds: [GoodDeed] = []
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        //This is a mock of good deeds for testing
+        for i in 1...100 {
+            goodDeeds.append(GoodDeed(id: "\(i)", title: "Text\(i)", desc: "This is my \(i) History Description", points: 150))
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.goodDeeds.count
     }
@@ -28,14 +37,5 @@ class HistoryViewController: FavorPayViewController, UITableViewDelegate, UITabl
         cell.points.text = String(self.goodDeeds[indexPath.row].points)
         
         return cell
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        //This is a mock of good deeds for testing
-        for i in 1...100 {
-            goodDeeds.append(GoodDeed(id: "\(i)", title: "Text\(i)", location: "", desc: "This is my \(i) Description", points: 150))
-        }
     }
 }

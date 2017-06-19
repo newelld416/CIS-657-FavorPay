@@ -18,7 +18,7 @@ class FavorPayTextView: UITextView {
         self.layoutMargins.bottom = 8
         
         self.textColor = THEME_COLOR5
-        self.backgroundColor = UIColor.clear
+        self.backgroundColor = THEME_COLOR3
     }
 }
 

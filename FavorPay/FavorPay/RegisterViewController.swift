@@ -20,14 +20,13 @@ class RegisterViewController: FavorPayViewController {
         if let email = self.email.text {
             let password = self.password.text!
             if self.password.text == self.passwordConfirm.text {
-                // [START create_user]
                 Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
                     if let _ = error {
                         print(error?.localizedDescription ?? "")
                         return
                     } else {
                         //Successfully created a user
-                        print("\(user!.email!) created")
+                        self.performSegue(withIdentifier: "registerSegue", sender: nil)
                     }
                 }
             } else {

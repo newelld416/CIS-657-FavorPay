@@ -12,8 +12,6 @@ class FavorPayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = THEME_COLOR3
-        
         // dismiss keyboard when tapping outside oftext fields
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard)))
     }

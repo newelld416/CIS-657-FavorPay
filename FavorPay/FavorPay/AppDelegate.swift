@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import GoogleMaps
+import GooglePlaces
 
 let THEME_COLOR1 = UIColor(red:1.00, green:0.72, blue:0.22, alpha:1.0)
 let THEME_COLOR2 = UIColor(red:0.98, green:0.38, blue:0.13, alpha:1.0)
@@ -36,6 +38,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navAppearance.isTranslucent = false
         
         FirebaseApp.configure()
+        
+        let GOOGLE_PLACES_API_KEY = "AIzaSyCG_p1tXj1Ci9lNVnjCrxvd1CamrZr4rRc"
+        GMSServices.provideAPIKey(GOOGLE_PLACES_API_KEY)
+        GMSPlacesClient.provideAPIKey(GOOGLE_PLACES_API_KEY)
         
         return true
     }

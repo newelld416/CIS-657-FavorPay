@@ -17,7 +17,10 @@ target 'FavorPay' do
     # Pods for testing
   end
   
+  pod 'Eureka', '~> 2.0.0-beta.1'
   pod 'Firebase/Database'
   pod 'Firebase/Auth'
+  pod 'GoogleMaps'
+  pod 'GooglePlacePicker'
 
 end

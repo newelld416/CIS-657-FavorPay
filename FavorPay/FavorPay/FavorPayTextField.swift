@@ -18,7 +18,7 @@ class FavorPayTextField: UITextField {
         self.layoutMargins.bottom = 8
         
         self.textColor = THEME_COLOR5
-        self.backgroundColor = UIColor.clear
+        self.backgroundColor = THEME_COLOR3
         self.borderStyle = .roundedRect
         
         guard let ph = self.placeholder  else {
